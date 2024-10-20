@@ -1,7 +1,7 @@
 import threading
 import time
 
-def wakl_dog():
+def walk_dog():
 	time.sleep(5);
 	print("walking the dog done")
 
