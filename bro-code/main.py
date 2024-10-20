@@ -13,7 +13,16 @@ def mail():
 	time.sleep(2)
 	print("mail check done")
 
+chore1 = threading.Thread(target = walk_dog)
+chore2 = threading.Thread(target = trash)
+chore3 = threading.Thread(target = mail)
 
-walk_dog()
-trash()
-mail()
+chore1.start()
+chore2.start()
+chore3.start()
+
+chore1.join()
+chore2.join()
+chore3.join()
+
+print("All chores are complete")
